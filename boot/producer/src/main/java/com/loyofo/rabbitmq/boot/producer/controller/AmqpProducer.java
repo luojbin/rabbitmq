@@ -1,4 +1,4 @@
-package com.loyofo.rabbitmq.boot.provider.controller;
+package com.loyofo.rabbitmq.boot.producer.controller;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RequestMapping("jt")
 @RestController
-public class AmqpProvider {
+public class AmqpProducer {
     @Autowired
     private AmqpTemplate template;
 

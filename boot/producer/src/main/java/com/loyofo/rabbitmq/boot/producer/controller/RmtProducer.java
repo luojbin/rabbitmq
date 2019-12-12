@@ -1,4 +1,4 @@
-package com.loyofo.rabbitmq.boot.provider.controller;
+package com.loyofo.rabbitmq.boot.producer.controller;
 
 import org.springframework.amqp.rabbit.core.RabbitMessagingTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RequestMapping("rmt")
 @RestController
-public class RmtProvider {
+public class RmtProducer {
     @Autowired
     private RabbitMessagingTemplate messagingTemplate;
 

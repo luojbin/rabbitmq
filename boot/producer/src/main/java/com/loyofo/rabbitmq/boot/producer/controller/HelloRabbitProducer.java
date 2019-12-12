@@ -1,4 +1,4 @@
-package com.loyofo.rabbitmq.boot.provider.controller;
+package com.loyofo.rabbitmq.boot.producer.controller;
 
 import com.loyofo.rabbitmq.entity.User;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@RequestMapping("provider")
-public class HelloRabbitProvider {
+@RequestMapping("producer")
+public class HelloRabbitProducer {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
     @GetMapping("/send")
     public String send() {
         String context = "hello" + new Date();
-        System.out.println("Provider: " + context);
+        System.out.println("producer: " + context);
         User user = new User();
         user.setAge(11);
         user.setLeader(false);

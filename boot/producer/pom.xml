@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.loyofo.rabbitmq.boot</groupId>
-    <artifactId>provider</artifactId>
+    <artifactId>producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>provider</name>
+    <name>producer</name>
     <description>Demo project for Spring Boot</description>
 
 </project>
