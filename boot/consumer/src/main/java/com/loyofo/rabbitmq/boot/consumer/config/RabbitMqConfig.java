@@ -8,23 +8,19 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * @author yc
- * @title: RabbitMqConfig
- * @projectName qiuqiu
- * @description: TODO
- * @date 2019/10/22  16:31
+ * @author luojbin
+ * @version 1.0
+ * @date 2019/12/13 18:27
  */
 @Configuration
 public class RabbitMqConfig {
 
     // 1. 简单队列 1-1
+    // 2. 工作队列 1-n
     @Bean
     public Queue simpleQueue() {
         return new Queue(RabbitConstant.SIMPLE_QUEUE,true);
     }
-    // 2. 工作队列 1-n
-
-    // 3. 直连模式 p-de-nq-c
 
     //region 3.直连模式 p-de-nq-c
     @Bean
