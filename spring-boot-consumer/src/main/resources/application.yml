@@ -6,7 +6,7 @@ spring:
     name: spring-boot-rabbit-consumer
   #配置rabbitMq 服务器
   rabbitmq:
-    host: 192.168.30.104
+    host: my-server-rabbitmq
     port: 5672
     username: guest
     password: guest
