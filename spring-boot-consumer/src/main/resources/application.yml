@@ -1,0 +1,18 @@
+server:
+  port: 9004
+spring:
+  #给项目来个名字
+  application:
+    name: spring-boot-rabbit-consumer
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 192.168.30.104
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 3
+        max-concurrency: 10
+#    publisher-confirm-type: correlated

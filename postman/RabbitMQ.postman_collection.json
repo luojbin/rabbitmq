@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "7a6292f7-33f1-499e-9fb7-24547a6f63f2",
+		"name": "RabbitMQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "简单队列",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{producer}}/producer/sendSq",
+					"host": [
+						"{{producer}}"
+					],
+					"path": [
+						"producer",
+						"sendSq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "直连模式",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{producer}}/producer/sendDx",
+					"host": [
+						"{{producer}}"
+					],
+					"path": [
+						"producer",
+						"sendDx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "订阅模式",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{producer}}/producer/sendFx",
+					"host": [
+						"{{producer}}"
+					],
+					"path": [
+						"producer",
+						"sendFx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "主题模式",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{producer}}/producer/sendTp",
+					"host": [
+						"{{producer}}"
+					],
+					"path": [
+						"producer",
+						"sendTp"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

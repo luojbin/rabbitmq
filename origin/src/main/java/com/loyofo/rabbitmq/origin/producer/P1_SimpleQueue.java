@@ -13,12 +13,17 @@ public class P1_SimpleQueue {
         Connection connection = RabbitUtil.getConnection();
         // 从连接中创建通道
         Channel channel = connection.createChannel();
+
+        channel.txSelect();
+
         // 声明（创建）队列
-        channel.queueDeclare(RabbitConstant.SIMPLE_QUEUE, false, false, false, null);
+        channel.queueDeclare(RabbitConstant.SIMPLE_QUEUE, true, false, false, null);
         // 消息内容
         String message = "Hello World!";
         channel.basicPublish("", RabbitConstant.SIMPLE_QUEUE, null, message.getBytes());
         System.out.println(" [x] Sent '" + message + "'");
+
+        channel.txCommit();
         //关闭通道和连接
         channel.close();
         connection.close();

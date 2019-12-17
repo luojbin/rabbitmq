@@ -1,9 +1,0 @@
-- rabbitmq
-    - common
-    - origin
-    - spring
-        - producer
-        - consumer
-    - boot
-        - producer
-        - consumer

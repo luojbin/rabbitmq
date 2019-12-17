@@ -14,7 +14,7 @@ public class C1_SimpleQueue {
         // 从连接中创建通道
         Channel channel = connection.createChannel();
         // 声明队列
-        channel.queueDeclare(RabbitConstant.SIMPLE_QUEUE, false, false, false, null);
+        channel.queueDeclare(RabbitConstant.SIMPLE_QUEUE, true, false, false, null);
 
         // 拉取消息
         GetResponse response = channel.basicGet(RabbitConstant.SIMPLE_QUEUE, false);
@@ -23,7 +23,7 @@ public class C1_SimpleQueue {
             System.out.println("Get message <= " + data);
             channel.basicAck(response.getEnvelope().getDeliveryTag(), false);
         } else {
-            System.out.println("简单队列暂时没有消息");
+            System.out.println("█ █ █ █ 简单队列暂时没有消息");
         }
         //关闭通道和连接
         channel.close();

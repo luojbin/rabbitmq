@@ -2,21 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rabbitmq</artifactId>
+        <groupId>com.loyofo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.loyofo</groupId>
-    <artifactId>rabbitmq</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>boot</module>
-        <module>common</module>
-        <module>origin</module>
-        <module>spring-consumer</module>
-        <module>spring-producer</module>
-        <module>spring-boot-consumer</module>
-        <module>spring-boot-producer</module>
-    </modules>
-    <packaging>pom</packaging>
+    <groupId>com.loyofo.rabbitmq</groupId>
+    <artifactId>spring-consumer</artifactId>
 
     <dependencies>
         <dependency>
